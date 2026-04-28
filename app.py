@@ -6,6 +6,9 @@ import plotly.express as px
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestRegressor
 
+# carregar dados
+df = pd.read_csv("clientes.csv")
+
 # features (entrada)
 X = df[["idade", "ativo"]]
 
@@ -31,8 +34,7 @@ st.metric("Acurácia do modelo", f"{score:.2f}")
 # título
 st.title("📊 Dashboard de Clientes")
 
-# carregar dados
-df = pd.read_csv("clientes.csv")
+
 
 # mostrar dados
 st.subheader("Dados")
